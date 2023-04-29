@@ -9,40 +9,57 @@ y la tarifa que aplica a un producto de una cadena entre unas fechas determinada
 
 A continuación se muestra un ejemplo de la tabla con los campos relevantes:
  
-PRICES
--------
+# PRICES
  
 BRAND_ID         START_DATE                                    END_DATE                        PRICE_LIST                   PRODUCT_ID  PRIORITY                 PRICE           CURR
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 1         2020-06-14-00.00.00                        2020-12-31-23.59.59                        1                        35455                0                        35.50            EUR
+
 1         2020-06-14-15.00.00                        2020-06-14-18.30.00                        2                        35455                1                        25.45            EUR
+
 1         2020-06-15-00.00.00                        2020-06-15-11.00.00                        3                        35455                1                        30.50            EUR
+
 1         2020-06-15-16.00.00                        2020-12-31-23.59.59                        4                        35455                1                        38.95            EUR
+
  
-Campos: 
+# Campos: 
  
-BRAND_ID: foreign key de la cadena del grupo (1 = ZARA).
+BRAND_ID: foreign key de la cadena del grupo (1 = ZARA). 
+
 START_DATE , END_DATE: rango de fechas en el que aplica el precio tarifa indicado.
+
 PRICE_LIST: Identificador de la tarifa de precios aplicable.
+
 PRODUCT_ID: Identificador código de producto.
+
 PRIORITY: Desambiguador de aplicación de precios. Si dos tarifas coinciden en un rago de fechas se aplica la de mayor prioridad (mayor valor numérico).
+
 PRICE: precio final de venta.
+
 CURR: iso de la moneda.
 
 
-Datos:
+
+# Datos:
 
 BRAND_ID	1 
+
 START_DATE	2020-06-14-00.00.0
-END_DATE	2020-12-31-23.59.59        
+
+END_DATE	2020-12-31-23.59.59  
+
 PRICE_LIST	1
+
 PRODUCT_ID	35455
+
 PRIORITY	0 
+
 PRICE		35.50 
+
 CURR		EUR
 
 
-Se pide:
+# Se pide:
  
 Construir una aplicación/servicio en SpringBoot que provea una end point rest 
 de consulta  tal que:
@@ -67,7 +84,9 @@ con los datos del ejemplo,
 elegir el tipo de dato que se considere adecuado para los mismos).
               
 Desarrollar unos test al endpoint rest que  validen las siguientes peticiones al servicio con los datos del ejemplo:
-                                                                                       
+
+# Test 
+
 -          Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 	Resultado:
 	{
@@ -121,8 +140,63 @@ Desarrollar unos test al endpoint rest que  validen las siguientes peticiones al
 	}
  
  
-Se valorará:
+# Se valorará:
  
 Diseño y construcción del servicio.
 Calidad de Código.
 Resultados correctos en los test.
+
+# Formatos de fecha permitidos:
+yyyy-MM-dd-HH.mm.ss 		2020-06-14-16.00.00
+
+yyyy-MM-dd-HH.mm.s 		2020-06-14-16.00.0
+
+yyyy-MM-dd-HH.mm 		2020-06-14-16.00
+
+yyyy-MM-dd-HH:mm:ss 		2020-06-14-16:00:00
+
+yyyy-MM-dd-HH:mm:s 		2020-06-14-16:00:0
+
+yyyy-MM-dd-HH:mm 		2020-06-14-16:00
+
+yyyy-MM-dd HH.mm.ss 		2020-06-14 16.00.00
+
+yyyy-MM-dd HH.mm.s 		2020-06-14 16.00.0
+
+yyyy-MM-dd HH.mm 		2020-06-14 16.00
+
+yyyy-MM-dd HH:mm:ss 		2020-06-14 16:00:00
+
+yyyy-MM-dd HH:mm:s 		2020-06-14 16:00:0
+
+yyyy-MM-dd HH:mm 		2020-06-14 16:00
+
+yyyy/MM/dd HH:mm:ss 		2020/06/14 16:00:00
+
+yyyy/MM/dd HH:mm:s 		2020/06/14 16:00:0
+
+yyyy/MM/dd HH:mm 		2020/06/14 16:00
+
+yyyy/MM/dd HH.mm.ss 		2020/06/14 16.00.00
+
+yyyy/MM/dd HH.mm.s 		2020/06/14 16.00.0
+
+yyyy/MM/dd HH.mm 		2020/06/14 16.00
+
+yyyy/MM/dd-HH:mm:ss 		2020/06/14-16:00:00
+
+yyyy/MM/dd-HH:mm:s 		2020/06/14-16:00:0
+
+yyyy/MM/dd-HH:mm 		2020/06/14-16:00
+
+yyyy/MM/dd-HH.mm.ss 		2020/06/14-16.00.00
+
+yyyy/MM/dd-HH.mm.s 		2020/06/14-16.00.0
+
+yyyy/MM/dd-HH.mm 		2020/06/14-16.00
+
+yyyy/MM/dd 			2020/06/14
+
+yyyy-MM-dd 			2020-06-14
+
+yyyy MM dd 			2020 06 14
