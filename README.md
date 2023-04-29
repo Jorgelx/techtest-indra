@@ -28,7 +28,8 @@ PRODUCT_ID: Identificador código de producto.
 PRIORITY: Desambiguador de aplicación de precios. Si dos tarifas coinciden en un rago de fechas se aplica la de mayor prioridad (mayor valor numérico).
 PRICE: precio final de venta.
 CURR: iso de la moneda.
- --------
+
+
 Datos:
 
 BRAND_ID	1 
@@ -79,43 +80,3 @@ Se valorará:
 Diseño y construcción del servicio.
 Calidad de Código.
 Resultados correctos en los test.
-
-------------------------------------------
-Formatos de fecha permitidos:
-yyyy-MM-dd-HH.mm.ss 	2020-06-14-16.00.00
-yyyy-MM-dd-HH.mm.s 		2020-06-14-16.00.0
-yyyy-MM-dd-HH.mm 		2020-06-14-16.00
-
-yyyy-MM-dd-HH:mm:ss 	2020-06-14-16:00:00
-yyyy-MM-dd-HH:mm:s 		2020-06-14-16:00:0
-yyyy-MM-dd-HH:mm 		2020-06-14-16:00
-
-yyyy-MM-dd HH.mm.ss 	2020-06-14 16.00.00
-yyyy-MM-dd HH.mm.s 		2020-06-14 16.00.0
-yyyy-MM-dd HH.mm 		2020-06-14 16.00
-
-yyyy-MM-dd HH:mm:ss 	2020-06-14 16:00:00
-yyyy-MM-dd HH:mm:s 		2020-06-14 16:00:0
-yyyy-MM-dd HH:mm 		2020-06-14 16:00
-
-yyyy/MM/dd HH:mm:ss 	2020/06/14 16:00:00
-yyyy/MM/dd HH:mm:s 		2020/06/14 16:00:0
-yyyy/MM/dd HH:mm 		2020/06/14 16:00
-
-yyyy/MM/dd HH.mm.ss 	2020/06/14 16.00.00
-yyyy/MM/dd HH.mm.s 		2020/06/14 16.00.0
-yyyy/MM/dd HH.mm 		2020/06/14 16.00
-
-yyyy/MM/dd-HH:mm:ss 	2020/06/14-16:00:00
-yyyy/MM/dd-HH:mm:s 		2020/06/14-16:00:0
-yyyy/MM/dd-HH:mm 		2020/06/14-16:00
-
-yyyy/MM/dd-HH.mm.ss 	2020/06/14-16.00.00
-yyyy/MM/dd-HH.mm.s 		2020/06/14-16.00.0
-yyyy/MM/dd-HH.mm 		2020/06/14-16.00
-
-yyyy/MM/dd 				2020/06/14
-yyyy-MM-dd 				2020-06-14
-yyyy MM dd 				2020 06 14
---------------------------------
-
