@@ -83,9 +83,15 @@ con los datos del ejemplo,
 (se pueden cambiar el nombre de los campos y añadir otros nuevos si se quiere, 
 elegir el tipo de dato que se considere adecuado para los mismos).
               
-Desarrollar unos test al endpoint rest que  validen las siguientes peticiones al servicio con los datos del ejemplo:
+
 
 # Test 
+
+Desarrollar unos test al endpoint rest que  validen las siguientes peticiones al servicio con los datos del ejemplo:
+
+Los Test se encuentran en la clase: TechtestApplicationTests.java
+
+Pueden probarse de distintas formas, una de ellas es lanzar el comando de maven mvn test
 
 -          Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 	Resultado:
